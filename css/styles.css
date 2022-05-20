@@ -3,44 +3,102 @@
 }
 
 .striked {
-  text-decoration:line-through;
+  text-decoration: line-through;
+}
+.sub-heading {
+  margin: 0 auto;
+  font-size: 2.5rem;
 }
 
-.mountain-image {
-  /* position:relative; */
+.title {
+  margin-top: 50px;
+  margin-bottom: 0;
+
 }
 
 .cloud-image-1 {
   position: absolute;
   left: 300px;
-  bottom: 300px
+  bottom: 200px;
 }
 
 .cloud-image-2 {
   position: absolute;
-  right: 300px;
-  top:50px;
+  right: 250px;
+  top: 50px;
+}
+
+.mountain-image {
+  position: relative;
+  bottom: 50px;
 }
 
 .main-container {
   width: 100%;
   height: 500px;
   text-align: center;
-  padding-top: 50px;
   position: relative;
-
+  display: block;
 }
 
-.top-container{
+.top-container {
   text-align: center;
+}
 
+.gif {
+  width: 150px;
+  height: 150;
+}
+
+.my-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-top: 50px;
+}
+
+.contact-image {
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  right: 0; */
+}
+
+.description-text {
+  display: inline-block;
+  width: 75%;
+}
+
+.last-line {
+  display: inline-block;
+}
+
+.final-container {
+  position: relative;
+  text-align: center;
+}
+
+.computer-image {
+  height: 150px;
+  width: 150px;
+  /* position: absolute;
+  right: 0; */
 }
 
 body {
-  font-family: 'Lora','Merriweather', serif;
+  background-color: #7FB5FF;
+  text-align: center;
 }
-
+/*
+FONT SIZING
+font size = 100% which will be 16px
+1em =16px
+font size from parent is multiplied if child has font size
+ex : parent has 2em child has 2em but child will get 4em as size
+rem will ignore parent's font size
+*/
 h1 {
+  font-size: 90px;
   font-family: 'Sacramento', cursive;
 }
 
@@ -49,9 +107,9 @@ h2 {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Lora', 'Merriweather', serif;
 }
