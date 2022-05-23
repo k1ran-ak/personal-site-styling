@@ -2,30 +2,35 @@
   text-decoration: underline;
 }
 
+.overlined {
+  text-decoration: overline;
+}
+
 .striked {
   text-decoration: line-through;
 }
 .sub-heading {
   margin: 0 auto;
   font-size: 2.5rem;
+  color: #D0C9C0;
 }
 
 .title {
-  margin-top: 50px;
-  margin-bottom: 0;
+  padding-top: 50px;
+  color: #D0C9C0;
 
 }
 
 .cloud-image-1 {
   position: absolute;
-  left: 300px;
+  left: 250px;
   bottom: 200px;
 }
 
 .cloud-image-2 {
-  position: absolute;
-  right: 250px;
-  top: 50px;
+  position: relative;
+  left: 400px;
+  top: 100px;
 }
 
 .mountain-image {
@@ -34,21 +39,41 @@
 }
 
 .main-container {
-  width: 100%;
-  height: 500px;
+  margin: 0;
   text-align: center;
   position: relative;
   display: block;
+  background-color: #7FB5FF;
 }
 
 .top-container {
   text-align: center;
+
+}
+
+.middle-container {
+  margin: 0 auto;
+}
+
+.bottom-container {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .gif {
   width: 150px;
-  height: 150;
+  height: 150px;
+  float: left;
+  margin-right: 30px;
 }
+
+.gif-2 {
+  width: :150px;
+  height: 150px;
+  float: right;
+  margin-left: 20px;
+}
+
 
 .my-image {
   height: 150px;
@@ -66,7 +91,7 @@
 
 .description-text {
   display: inline-block;
-  width: 75%;
+  width: 50%;
 }
 
 .last-line {
@@ -79,15 +104,43 @@
 }
 
 .computer-image {
-  height: 150px;
-  width: 150px;
+  height: 25%;
+  width: 25%;
+
   /* position: absolute;
   right: 0; */
 }
 
+.contact-me {
+  margin: 0 auto;
+}
+
+.skill-row-1 {
+  width: 50%;
+  margin: 25px auto 25px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.skill-row-2 {
+  width: 50%;
+  margin: 100px auto 25px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+
+
+
+/* .skills {
+  display: inline-block;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
-  background-color: #7FB5FF;
   text-align: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 /*
 FONT SIZING
@@ -100,16 +153,130 @@ rem will ignore parent's font size
 h1 {
   font-size: 90px;
   font-family: 'Sacramento', cursive;
+  line-height: 2;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: #2F8F9D;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
+  color: #11999E;
 }
 
 p {
   font-family: 'Lora', 'Merriweather', serif;
+}
+
+a {
+  color: #11999E;
+}
+
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-spacing: 50px;
+  border-color: #7F8487;
+  border-width: 10px;
+  height: 10px;
+  width: 15%;
+}
+
+
+
+
+
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.footer-container {
+  display: grid;
+  height: 200px;
+  width: 100%;
+  place-items: center;
+  background: #C4DDFF;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+  color: #ffffff;
+}
+
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #171515;
+  color: #ffffff;
 }
